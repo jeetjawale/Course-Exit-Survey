@@ -1,0 +1,122 @@
+body {
+  font-family: "Times New Roman", Times, serif; /* Set Times New Roman as the global font family */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: relative;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Add a line box above the header */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #49688e;
+}
+
+/* Add a line box below the header */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #15305b;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap within the left section */
+}
+
+.header-logo {
+  max-height: 130px; /* Reduce logo height for better responsiveness */
+  width: auto;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.header-content {
+  text-align: left;
+}
+
+.header-content h1 {
+  font-size: 1.5rem; /* Adjusted for responsiveness */
+  margin: 0;
+  color: #294a70;
+  text-shadow: 1px 1px 1px #000;
+  padding-left: 10px;
+}
+
+.header-content h3,
+.header-content h4 {
+  font-size: 1.5rem; /* Adjusted for responsiveness */
+  margin: 5px 0 0;
+  color: #000;
+  padding-left: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  position: relative; /* Make the parent relatively positioned */
+}
+
+.admin-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.admin-button:hover {
+  background-color: #0056b3;
+}
+
+.current-date-time {
+  font-size: 1.3rem;
+  color: #333;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .header-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-content h3,
+  .header-content h4 {
+    font-size: 0.9rem;
+    margin-top: 3px; /* Adjust margin for better spacing */
+  }
+
+  .header-logo {
+    max-height: 80px;
+  }
+
+  .header {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .header::before,
+  .header::after {
+    display: block; /* Ensure the line boxes are displayed on smaller screens */
+  }
+}

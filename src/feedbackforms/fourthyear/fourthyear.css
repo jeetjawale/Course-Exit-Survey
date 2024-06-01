@@ -1,0 +1,92 @@
+/* fourthyear.css */
+
+/* Common styles for both small and large screens */
+.fourthyear-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.fourthyear-semester {
+  flex: 1;
+}
+
+.fourthyear-semester h2 {
+  margin-bottom: 0.625rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}
+
+.fourthyear-semester ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fourthyear-semester li {
+  margin-bottom: 0.5rem; /* Increased margin for better separation */
+}
+
+.fourthyear-square-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.625rem;
+  font-size: 1.25rem;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  height: 3rem; /* Increased button height for better clickability */
+  max-width: 20rem;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 0.625rem;
+}
+
+.fourthyear-square-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.fourthyear-square-button:active {
+  background-color: #004494;
+  transform: scale(0.95);
+}
+
+.fourthyear-wrapper {
+  text-align: center;
+}
+
+.fourthyear-heading {
+  margin-bottom: 1rem; /* Increased margin for better separation */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.2rem;
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 768px) {
+  .fourthyear-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(15rem, 1fr)
+    ); /* Adjusted min-width for smaller screens */
+    padding: 0.625rem; /* Reduced padding for smaller screens */
+    gap: 0.75rem; /* Reduced gap for smaller screens */
+  }
+
+  .fourthyear-semester h2 {
+    font-size: 1.25rem;
+  }
+
+  .fourthyear-square-button {
+    font-size: 1rem; /* Adjusted font size for small screens */
+    height: 2.5rem;
+  }
+
+  .fourthyear-heading {
+    font-size: 1.8rem; /* Adjusted font size for small screens */
+  }
+}
