@@ -76,7 +76,7 @@ const FourthYear = () => {
                       className="fourthyear-square-button"
                     >
                       {course.code} - {course.name}
-                    </button>
+                    </button> 
                     {showElectiveVIOptions && (
                       <ul className="fourthyear-dropdown">
                         <li>

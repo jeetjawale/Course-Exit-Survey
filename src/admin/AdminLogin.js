@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; // Adjust the import path as needed
+import { useAuth } from './AuthContext'; // Adjust the import path as needed
 import './adminLogin.css';
 
 function AdminLogin() {
@@ -10,13 +11,14 @@ function AdminLogin() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log('Admin logged in with email:', email);
-      // After successful login, navigate to the admin buttons page
+      login(); // Set the login state to true
       navigate('/admin/adminyears');
     } catch (error) {
       setError('Failed to log in. Please check your email and password.');

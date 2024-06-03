@@ -1,21 +1,23 @@
 // src/components/Header.js
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../admin/AuthContext'; // Adjust the import path as needed
 import logo from '../assets/logo.png';
 import './header.css';
 
 function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const { isLoggedIn, logout } = useAuth();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   // Function to handle logout
   const handleLogout = () => {
-    // Perform logout actions here, such as clearing local storage or session
-    // Redirect the user to the login page or any other appropriate page
-    setIsLoggedIn(false);
-    // Example:
-    // localStorage.removeItem('user'); // Assuming user data is stored in localStorage
-    // Redirect to login page
-    // history.push('/login'); // Make sure to import useHistory hook
+    logout();
+    navigate('/admin/login');
+  };
+
+  // Function to handle home button click
+  const handleHomeClick = () => {
+    navigate('/');
   };
 
   return (
@@ -29,6 +31,7 @@ function Header() {
         </div>
       </div>
       <div className="header-right">
+        <button onClick={handleHomeClick} className="home-button">Home</button>
         {isLoggedIn ? (
           <button onClick={handleLogout} className="admin-button">Logout</button>
         ) : (
