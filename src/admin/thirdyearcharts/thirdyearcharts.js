@@ -58,7 +58,7 @@ const ThirdYearCharts = () => {
             {fifthSemesterCourses.map((course, index) => (
               <li key={index}>
                 <Link
-                  to={`/admin/thirdyearcharts/${course.path}`}
+                  to={`/admin/thirdyearcharts/fifthsem/${course.path}`}
                   className="thirdyearcharts-square-button"
                 >
                   {course.code} - {course.name}
@@ -73,7 +73,7 @@ const ThirdYearCharts = () => {
             {sixthSemesterCourses.map((course, index) => (
               <li key={index}>
                 <Link
-                  to={`/admin/thirdyearcharts/${course.path}`}
+                  to={`/admin/thirdyearcharts/sixthsem/${course.path}`}
                   className="thirdyearcharts-square-button"
                 >
                   {course.code} - {course.name}

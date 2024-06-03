@@ -1,14 +1,35 @@
-/* Global box-sizing rule to include padding and border in the element's total width and height */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* Add this CSS to your existing stylesheet */
+
+.home-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px; /* Add margin between the buttons */
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+.admin-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px; /* Add margin between the buttons */
+}
+
+.admin-button:hover {
+  background-color: #0056b3;
+}
+
+/* Your existing CSS continues below */
+body {
   font-family: "Times New Roman", Times, serif; /* Set Times New Roman as the global font family */
 }
 
@@ -86,20 +107,6 @@ html, body {
   position: relative; /* Make the parent relatively positioned */
 }
 
-.admin-button, .home-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  margin-right: 10px; /* Add margin to separate buttons */
-}
-
-.admin-button:hover, .home-button:hover {
-  background-color: #0056b3;
-}
-
 .current-date-time {
   font-size: 1.3rem;
   color: #333;
@@ -129,10 +136,5 @@ html, body {
   .header::before,
   .header::after {
     display: block; /* Ensure the line boxes are displayed on smaller screens */
-  }
-
-  .admin-button, .home-button {
-    padding: 8px 16px; /* Adjust padding for smaller screens */
-    font-size: 0.9rem;
   }
 }

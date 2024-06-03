@@ -31,7 +31,9 @@ function Header() {
         </div>
       </div>
       <div className="header-right">
-        <button onClick={handleHomeClick} className="home-button">Home</button>
+        {!isLoggedIn && (
+          <button onClick={handleHomeClick} className="home-button">Home</button>
+        )}
         {isLoggedIn ? (
           <button onClick={handleLogout} className="admin-button">Logout</button>
         ) : (

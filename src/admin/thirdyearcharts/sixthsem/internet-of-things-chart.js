@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Chart from "chart.js/auto";
-import { database, ref, get } from '../../firebase';
+import { database, ref, get } from '../../../firebase';
 
 function InternetOfThingsChart() {
     const [chartData, setChartData] = useState(null);

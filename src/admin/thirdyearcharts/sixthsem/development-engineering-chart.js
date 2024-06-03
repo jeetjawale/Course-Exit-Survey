@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import Chart from "chart.js/auto";
-import { database, ref, get } from '../../firebase';
+import { database, ref, get } from '../../../firebase';
 
-function CompilerDesignChart() {
+function DevelopmentEngineeringChart() {
     const [chartData, setChartData] = useState(null);
     const chartRef = useRef(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const snapshot = await get(ref(database, 'ThirdYear/SixthSemester/BTCOC601:Compiler Design'));
+                const snapshot = await get(ref(database, 'ThirdYear/SixthSemester/BTHM605(A):Development Engineering'));
                 if (snapshot.exists()) {
                     const data = snapshot.val();
                     console.log("Data fetched from Firebase:", data); // Debug log
@@ -83,7 +83,7 @@ function CompilerDesignChart() {
             }
 
             // Create new chart instance
-            const ctx = document.getElementById("compilerDesignChart").getContext("2d");
+            const ctx = document.getElementById("developmentengineeringChart").getContext("2d");
             chartRef.current = new Chart(ctx, {
                 type: "pie",
                 data: {
@@ -111,7 +111,7 @@ function CompilerDesignChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Compiler Design Ratings",
+                            text: "Development Engineering Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -135,9 +135,9 @@ function CompilerDesignChart() {
 
     return (
         <div style={{ width: "100%", height: "500px" }}>
-            <canvas id="compilerDesignChart"></canvas>
+            <canvas id="developmentengineeringChart"></canvas>
         </div>
     );
 }
 
-export default CompilerDesignChart;
+export default DevelopmentEngineeringChart;

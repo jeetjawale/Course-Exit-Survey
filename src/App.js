@@ -6,11 +6,14 @@ import Header from './components/header';
 import ButtonGroup from './button/buttongroup';
 import AdminLogin from './admin/AdminLogin';
 import AdminYears from './admin/adminyears';
+import SecondYearCharts from './admin/secondyearcharts/secondyearcharts';
 import ThirdYearCharts from './admin/thirdyearcharts/thirdyearcharts';
-import CompilerDesignChart from './admin/thirdyearcharts/compiler-design-chart';
-import ComputerNetworksChart from './admin/thirdyearcharts/computer-networks-chart';
-import CompetitiveProgrammingChart from './admin/thirdyearcharts/competitive-programming-chart';
-import InternetOfThingsChart from './admin/thirdyearcharts/internet-of-things-chart';
+import CompilerDesignChart from './admin/thirdyearcharts/sixthsem/compiler-design-chart';
+import ComputerNetworksChart from './admin/thirdyearcharts/sixthsem/computer-networks-chart';
+import CompetitiveProgrammingChart from './admin/thirdyearcharts/sixthsem/competitive-programming-chart';
+import InternetOfThingsChart from './admin/thirdyearcharts/sixthsem/internet-of-things-chart';
+import MachineLearningChart from './admin/thirdyearcharts/sixthsem/machine-learning-chart';
+import DevelopmentEngineeringChart from './admin/thirdyearcharts/sixthsem/development-engineering-chart';
 import FirstYear from './feedbackforms/firstyear/firstyear';
 import SecondYear from './feedbackforms/secondyear/secondyear';
 import ThirdYear from './feedbackforms/thirdyear/thirdyear';
@@ -45,11 +48,14 @@ function App() {
             <Route path="/" element={<ButtonGroup />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/adminyears" element={<AdminYears />} />
+            <Route path="/admin/secondyearcharts" element={<SecondYearCharts />} />
             <Route path="/admin/thirdyearcharts" element={<ThirdYearCharts />} />
             <Route path="/admin/thirdyearcharts/competitive-programming-chart" element={<CompetitiveProgrammingChart />} />
             <Route path="/admin/thirdyearcharts/compiler-design-chart" element={<CompilerDesignChart />} />
             <Route path="/admin/thirdyearcharts/computer-networks-chart" element={<ComputerNetworksChart />} />
             <Route path="/admin/thirdyearcharts/internet-of-things-chart" element={<InternetOfThingsChart />} />
+            <Route path="/admin/thirdyearcharts/machine-learning-chart" element={<MachineLearningChart />} />
+            <Route path="/admin/thirdyearcharts/development-engineering-chart" element={<DevelopmentEngineeringChart />} />
             <Route path="/feedbackforms/firstyear" element={<FirstYear />} />
             <Route path="/feedbackforms/secondyear" element={<SecondYear />} />
             <Route path="/feedbackforms/thirdyear" element={<ThirdYear />} />
