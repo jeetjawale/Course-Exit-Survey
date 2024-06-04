@@ -2,14 +2,14 @@ import React, { useEffect, useState, useRef } from "react";
 import Chart from "chart.js/auto";
 import { database, ref, get } from '../../../firebase';
 
-function CompetitiveProgrammingChart() {
+function DatabaseSystemsChart() {
     const [chartData, setChartData] = useState(null);
     const chartRef = useRef(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const snapshot = await get(ref(database, 'ThirdYear/SixthSemester/BTCOL606:Competitive Programming'));
+                const snapshot = await get(ref(database, 'ThirdYear/FifthSemester/BTCOC501:Database Systems'));
                 if (snapshot.exists()) {
                     const data = snapshot.val();
                     console.log("Data fetched from Firebase:", data); // Debug log
@@ -83,7 +83,7 @@ function CompetitiveProgrammingChart() {
             }
 
             // Create new chart instance
-            const ctx = document.getElementById("competitiveprogrammingChart").getContext("2d");
+            const ctx = document.getElementById("databasesystemsChart").getContext("2d");
             chartRef.current = new Chart(ctx, {
                 type: "pie",
                 data: {
@@ -111,7 +111,7 @@ function CompetitiveProgrammingChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Competitve Programming Ratings",
+                            text: "BTCOC501:Database Systems Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -135,9 +135,9 @@ function CompetitiveProgrammingChart() {
 
     return (
         <div style={{ width: "100%", height: "500px" }}>
-            <canvas id="competitiveprogrammingChart"></canvas>
+            <canvas id="databasesystemsChart"></canvas>
         </div>
     );
 }
 
-export default CompetitiveProgrammingChart;
+export default DatabaseSystemsChart;

@@ -4,7 +4,7 @@ import "./thirdyearcharts.css"; // Import the CSS file for styling
 
 const ThirdYearCharts = () => {
   const fifthSemesterCourses = [
-    { code: "BTCOC501", name: "Database Systems", path: "database-systems-chart" },
+    { code: "BTCOC501", name: "Database Systems", path: "database-systems" },
     {
       code: "ВTСОС502",
       name: "Theory of Computation",

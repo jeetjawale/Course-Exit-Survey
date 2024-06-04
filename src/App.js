@@ -8,6 +8,11 @@ import AdminLogin from './admin/AdminLogin';
 import AdminYears from './admin/adminyears';
 import SecondYearCharts from './admin/secondyearcharts/secondyearcharts';
 import ThirdYearCharts from './admin/thirdyearcharts/thirdyearcharts';
+import TheoryOfComputationChart from './admin/thirdyearcharts/fifthsem/theory-of-computation-chart';
+import NumericalMethodsChart from './admin/thirdyearcharts/fifthsem/numerical-methods-chart';
+import SoftwareEngineeringChart from './admin/thirdyearcharts/fifthsem/software-engineering-chart';
+import DatabaseSystemsChart from './admin/thirdyearcharts/fifthsem/database-systems-chart';
+import EconomicsManagementChart from './admin/thirdyearcharts/fifthsem/economics-management-chart';
 import CompilerDesignChart from './admin/thirdyearcharts/sixthsem/compiler-design-chart';
 import ComputerNetworksChart from './admin/thirdyearcharts/sixthsem/computer-networks-chart';
 import CompetitiveProgrammingChart from './admin/thirdyearcharts/sixthsem/competitive-programming-chart';
@@ -50,12 +55,17 @@ function App() {
             <Route path="/admin/adminyears" element={<AdminYears />} />
             <Route path="/admin/secondyearcharts" element={<SecondYearCharts />} />
             <Route path="/admin/thirdyearcharts" element={<ThirdYearCharts />} />
-            <Route path="/admin/thirdyearcharts/competitive-programming-chart" element={<CompetitiveProgrammingChart />} />
-            <Route path="/admin/thirdyearcharts/compiler-design-chart" element={<CompilerDesignChart />} />
-            <Route path="/admin/thirdyearcharts/computer-networks-chart" element={<ComputerNetworksChart />} />
-            <Route path="/admin/thirdyearcharts/internet-of-things-chart" element={<InternetOfThingsChart />} />
-            <Route path="/admin/thirdyearcharts/machine-learning-chart" element={<MachineLearningChart />} />
-            <Route path="/admin/thirdyearcharts/development-engineering-chart" element={<DevelopmentEngineeringChart />} />
+            <Route path="/admin/thirdyearcharts/fifthsem/theory-of-computation-chart" element={<TheoryOfComputationChart />} />
+            <Route path="/admin/thirdyearcharts/fifthsem/numerical-methods-chart" element={<NumericalMethodsChart />} />
+            <Route path="/admin/thirdyearcharts/fifthsem/software-engineering-chart" element={<SoftwareEngineeringChart />} />
+            <Route path="/admin/thirdyearcharts/fifthsem/database-systems-chart" element={<DatabaseSystemsChart />} />
+            <Route path="/admin/thirdyearcharts/fifthsem/economics-management-chart" element={<EconomicsManagementChart />} />
+            <Route path="/admin/thirdyearcharts/sixthsem/competitive-programming-chart" element={<CompetitiveProgrammingChart />} />
+            <Route path="/admin/thirdyearcharts/sixthsem/compiler-design-chart" element={<CompilerDesignChart />} />
+            <Route path="/admin/thirdyearcharts/sixthsem/computer-networks-chart" element={<ComputerNetworksChart />} />
+            <Route path="/admin/thirdyearcharts/sixthsem/internet-of-things-chart" element={<InternetOfThingsChart />} />
+            <Route path="/admin/thirdyearcharts/sixthsem/machine-learning-chart" element={<MachineLearningChart />} />
+            <Route path="/admin/thirdyearcharts/sixthsem/development-engineering-chart" element={<DevelopmentEngineeringChart />} />
             <Route path="/feedbackforms/firstyear" element={<FirstYear />} />
             <Route path="/feedbackforms/secondyear" element={<SecondYear />} />
             <Route path="/feedbackforms/thirdyear" element={<ThirdYear />} />

@@ -14,7 +14,7 @@ const SecondYearCharts = () => {
       name: "Discrete Mathematics",
       path: "discrete-mathematics",
     },
-    { code: "ВTСОС303", name: "Data Structures", path: "data-structures" },
+    { code: "ВTСОC303", name: "Data Structures", path: "data-structures" },
     {
       code: "ВTСОС304",
       name: "Computer Architecture & Organization",
@@ -62,7 +62,7 @@ const SecondYearCharts = () => {
                 >
                   {course.code} - {course.name}
                 </Link>
-              </li>
+              </li> 
             ))}
           </ul>
         </div>
