@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import Chart from "chart.js/auto";
 import { database, ref, get } from '../../../firebase';
+import * as XLSX from 'xlsx';
 
 function EconomicsManagementChart() {
     const [chartData, setChartData] = useState(null);
     const chartRef = useRef(null);
+    const [feedbackData, setFeedbackData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,33 +26,50 @@ function EconomicsManagementChart() {
                     let coaCount = 0;
                     let icCount = 0;
 
+                    const feedbackList = [];
+
                     // Iterate through Firebase data
-                    Object.values(data).forEach(user => {
-                        const ratings = user.ratings;
+                    Object.entries(data).forEach(([prn, user]) => {
+                        const { fullname, email, ratings } = user;
+                        const userFeedback = { PRN: prn, Name: fullname, Email: email };
 
                         if (ratings["(A)General Course Management"]) {
-                            const gcmRatings = Object.values(ratings["(A)General Course Management"]);
-                            generalCourseManagementTotal += gcmRatings.reduce((sum, value) => sum + value, 0);
+                            const gcmRatings = Object.entries(ratings["(A)General Course Management"]);
+                            generalCourseManagementTotal += gcmRatings.reduce((sum, [, value]) => sum + value, 0);
                             gcmCount += gcmRatings.length;
+                            gcmRatings.forEach(([question, rating], index) => {
+                                userFeedback[`GCM Question ${index + 1}`] = rating;
+                            });
                         }
 
                         if (ratings["(B)Learning Environment"]) {
-                            const leRatings = Object.values(ratings["(B)Learning Environment"]);
-                            learningEnvironmentTotal += leRatings.reduce((sum, value) => sum + value, 0);
+                            const leRatings = Object.entries(ratings["(B)Learning Environment"]);
+                            learningEnvironmentTotal += leRatings.reduce((sum, [, value]) => sum + value, 0);
                             leCount += leRatings.length;
+                            leRatings.forEach(([question, rating], index) => {
+                                userFeedback[`LE Question ${index + 1}`] = rating;
+                            });
                         }
 
                         if (ratings["(C)Course Outcome Attainment"]) {
-                            const coaRatings = Object.values(ratings["(C)Course Outcome Attainment"]);
-                            courseOutcomeAttainmentTotal += coaRatings.reduce((sum, value) => sum + value, 0);
+                            const coaRatings = Object.entries(ratings["(C)Course Outcome Attainment"]);
+                            courseOutcomeAttainmentTotal += coaRatings.reduce((sum, [, value]) => sum + value, 0);
                             coaCount += coaRatings.length;
+                            coaRatings.forEach(([question, rating], index) => {
+                                userFeedback[`COA Question ${index + 1}`] = rating;
+                            });
                         }
 
                         if (ratings["(D)Instructor Characters"]) {
-                            const icRatings = Object.values(ratings["(D)Instructor Characters"]);
-                            instructorCharactersTotal += icRatings.reduce((sum, value) => sum + value, 0);
+                            const icRatings = Object.entries(ratings["(D)Instructor Characters"]);
+                            instructorCharactersTotal += icRatings.reduce((sum, [, value]) => sum + value, 0);
                             icCount += icRatings.length;
+                            icRatings.forEach(([question, rating], index) => {
+                                userFeedback[`IC Question ${index + 1}`] = rating;
+                            });
                         }
+
+                        feedbackList.push(userFeedback);
                     });
 
                     // Calculate overall ratings
@@ -64,6 +83,7 @@ function EconomicsManagementChart() {
                         labels,
                         dataValues
                     });
+                    setFeedbackData(feedbackList);
                 } else {
                     console.log("No data available");
                 }
@@ -111,7 +131,7 @@ function EconomicsManagementChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "BTHM505(A):Economics and Management Ratings",
+                            text: "Economics and Management Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -133,11 +153,33 @@ function EconomicsManagementChart() {
         }
     }, [chartData]);
 
+    const handleDownload = () => {
+        const worksheet = XLSX.utils.json_to_sheet(feedbackData);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
+        XLSX.writeFile(workbook, "EconomicsManagementFeedback.xlsx");
+    };
+
+    const buttonStyle = {
+        backgroundColor: '#007bff',
+        border: 'none',
+        color: 'white',
+        padding: '15px 32px',
+        textAlign: 'center',
+        textDecoration: 'none',
+        display: 'inline-block',
+        fontSize: '16px',
+        margin: '4px 2px',
+        cursor: 'pointer',
+        borderRadius: '4px'
+    };
+
     return (
         <div style={{ width: "100%", height: "500px" }}>
-            <canvas id="economicsChart"></canvas>
-        </div>
-    );
+        <canvas id="economicsChart"></canvas>
+        <button style={buttonStyle} onClick={handleDownload}>Download Feedback Data</button>
+    </div>
+);
 }
 
 export default EconomicsManagementChart;

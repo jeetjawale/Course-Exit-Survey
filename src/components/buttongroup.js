@@ -1,5 +1,4 @@
-// ButtonGroup.js
-
+//src/components/buttongroup.js
 import React from "react";
 import { Link } from "react-router-dom";
 import "./buttongroup.css"; // Import the CSS file for styling

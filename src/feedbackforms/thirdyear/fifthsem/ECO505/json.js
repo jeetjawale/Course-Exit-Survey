@@ -135,7 +135,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion14",
-        "title": "Ability to apply Compiler Design principles and techniques.",
+        "title": "Able to understand the basic concept of economics & describe the demand and supply mechanism along with the market equilibrium.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -143,7 +143,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion15",
-        "title": "Ability to develop the logic and programs for simple to complex Compiler systems\ndesign.",
+        "title": "Able to explain the concept of decision-making with a master budget & cost allocation.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -151,14 +151,14 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion16",
-        "title": "Ability to understand and corelate the Compiler concepts with the working of\nexisting compiler systems.",
+        "title": "Able to analyze financial statements & understand the time value of money.",
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
        },
        {
         "type": "rating",
         "name": "coaquestion17",
-        "title": "Ability to implement the concepts related to compiler phases with their different\nalgorithms by using some high level language.",
+        "title": "Able to describe depreciation accounting & understand the management thoughts.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -166,7 +166,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion18",
-        "title": "Ability to understand and meet requirements of compiler standards and working\nstrategy.",
+        "title": "Able to explain product development with its planning and control.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"

@@ -135,7 +135,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion14",
-        "title": "Ability to apply Compiler Design principles and techniques.",
+        "title": "Ability to explain the concepts of formal languages, automata, computability and complexity.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -143,7 +143,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion15",
-        "title": "Ability to develop the logic and programs for simple to complex Compiler systems\ndesign.",
+        "title": "Ability to design finite state machines, pushdown automata, Turing machines.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -151,14 +151,14 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion16",
-        "title": "Ability to understand and corelate the Compiler concepts with the working of\nexisting compiler systems.",
+        "title": "Ability to demonstrate the working of finite state machine, pushdown automata, Turing machine.",
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
        },
        {
         "type": "rating",
         "name": "coaquestion17",
-        "title": "Ability to implement the concepts related to compiler phases with their different\nalgorithms by using some high level language.",
+        "title": "Analyze the limitations of different state machines.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -166,7 +166,15 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion18",
-        "title": "Ability to understand and meet requirements of compiler standards and working\nstrategy.",
+        "title": "Ability to generate regular expressions and context free grammar for certain engineering problems.",
+        "isRequired": true,
+        "minRateDescription": "Strongly Disagree",
+        "maxRateDescription": "Strongly Agree"
+       },
+       {
+        "type": "rating",
+        "name": "coaquestion19",
+        "title": "Ability to understand and explain various application of automata theory in parsing ,compiler design ,pattern  searching .",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -179,7 +187,7 @@ export const json = {
       "elements": [
        {
         "type": "rating",
-        "name": "idquestion19",
+        "name": "idquestion20",
         "title": "The instructor had mastery over the content.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -187,7 +195,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion20",
+        "name": "idquestion21",
         "title": "All the students were treated impartially.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -195,7 +203,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion21",
+        "name": "idquestion22",
         "title": "The instructor had good communication skills.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -203,7 +211,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion22",
+        "name": "idquestion23",
         "title": "The instructor encouraged the students to raise questions in the classroom.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -211,7 +219,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion23",
+        "name": "idquestion24",
         "title": "Technical doubts were clarified well.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -219,7 +227,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion24",
+        "name": "idquestion25",
         "title": "The general attitude of the Instructor was quite supportive.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -242,7 +250,7 @@ export const json = {
       "expression": "iif({fullname} notempty, {fullname}, guest)"
      }
     ],
-    "cookieName": "theoru-of-computation-survey",
+    "cookieName": "theory-of-computation-survey",
     "questionTitleLocation": "left",
     "progressBarShowPageNumbers": true,
     "autoGrowComment": true,
