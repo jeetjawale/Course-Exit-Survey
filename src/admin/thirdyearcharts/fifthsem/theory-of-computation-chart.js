@@ -157,7 +157,7 @@ function TheoryOfComputationChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "TheoryOfComputationFeedback.xlsx");
+        XLSX.writeFile(workbook, "ВТСOC502:Theory Of Computation Feedback.xlsx");
     };
 
     const buttonStyle = {

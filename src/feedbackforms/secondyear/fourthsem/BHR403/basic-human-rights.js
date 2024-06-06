@@ -62,7 +62,7 @@ function Basichumanrights() {
         }
 
         // Save to Firebase Realtime Database under respective categories
-        const newSurveyRef = ref(database, `SecondYear/FourthSemester/BTHM603:Basic Human Rights/${prn}`); // Use PRN as key
+        const newSurveyRef = ref(database, `SecondYear/FourthSemester/BTHM403:Basic Human Rights/${prn}`); // Use PRN as key
         set(newSurveyRef, {
             email,
             fullname,

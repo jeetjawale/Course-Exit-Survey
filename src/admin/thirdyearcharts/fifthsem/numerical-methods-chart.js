@@ -131,7 +131,7 @@ function NumericalMethodsChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "BTCOE504(B): Numerical Methods Ratings",
+                            text: "ВТСОЕ504(B):Numerical Methods Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function NumericalMethodsChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "NumericalMethodsFeedback.xlsx");
+        XLSX.writeFile(workbook, "ВТСОЕ504(B):Numerical Methods Feedback.xlsx");
     };
 
     const buttonStyle = {

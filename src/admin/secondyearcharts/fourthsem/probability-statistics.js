@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import Chart from "chart.js/auto";
-import { database, ref, get } from "../../../firebase";  // Adjust the import path if needed
+import { database, ref, get } from '../../../firebase';
 import * as XLSX from 'xlsx';
 
-function ComputerNetworksChart() {
+function ProbabilityandStatisticsChart() {
     const [chartData, setChartData] = useState(null);
     const chartRef = useRef(null);
     const [feedbackData, setFeedbackData] = useState([]);
@@ -11,7 +11,7 @@ function ComputerNetworksChart() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const snapshot = await get(ref(database, 'ThirdYear/SixthSemester/BTCOC602:Computer Networks'));
+                const snapshot = await get(ref(database, 'SecondYear/FourthSemester/BTBS404:Probability and Statistics'));
                 if (snapshot.exists()) {
                     const data = snapshot.val();
                     console.log("Data fetched from Firebase:", data); // Debug log
@@ -103,7 +103,7 @@ function ComputerNetworksChart() {
             }
 
             // Create new chart instance
-            const ctx = document.getElementById("computerNetworksChart").getContext("2d");
+            const ctx = document.getElementById("probabilitystatisticsChart").getContext("2d");
             chartRef.current = new Chart(ctx, {
                 type: "pie",
                 data: {
@@ -131,7 +131,7 @@ function ComputerNetworksChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "BTCOC602:Computer Networks Ratings",
+                            text: "BTBS404:Probability and Statistics Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function ComputerNetworksChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "BTCOC602:Computer Networks Feedback.xlsx");
+        XLSX.writeFile(workbook, "BTBS404:Probability and Statistics Feedback.xlsx");
     };
 
     const buttonStyle = {
@@ -176,10 +176,10 @@ function ComputerNetworksChart() {
 
     return (
         <div style={{ width: "100%", height: "500px" }}>
-            <canvas id="computerNetworksChart"></canvas>
+            <canvas id="probabilitystatisticsChart"></canvas>
             <button style={buttonStyle} onClick={handleDownload}>Download Feedback Data</button>
         </div>
     );
 }
 
-export default ComputerNetworksChart;
+export default ProbabilityandStatisticsChart;

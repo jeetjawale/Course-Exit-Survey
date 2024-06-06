@@ -131,7 +131,7 @@ function DatabaseSystemsChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Database Systems Ratings",
+                            text: "BTCOC501:Database Systems Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function DatabaseSystemsChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "DatabaseSystemsFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTCOC501:Database Systems Feedback.xlsx");
     };
 
     const buttonStyle = {

@@ -131,7 +131,7 @@ function CompetitiveProgrammingChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Competitive Programming Ratings",
+                            text: "BTCOL606:Competitive Programming Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function CompetitiveProgrammingChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "CompetitiveProgrammingFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTCOL606:Competitive Programming Feedback.xlsx");
     };
 
     const buttonStyle = {

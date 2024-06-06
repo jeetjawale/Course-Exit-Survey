@@ -131,7 +131,7 @@ function CompilerDesignChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Compiler Design Ratings",
+                            text: "BTCOC601:Compiler Design Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function CompilerDesignChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "CompilerDesignFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTCOC601:Compiler Design Feedback.xlsx");
     };
 
     const buttonStyle = {

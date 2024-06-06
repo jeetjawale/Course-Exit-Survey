@@ -63,7 +63,7 @@ function DAA() {
         }
 
         // Save to Firebase Realtime Database under respective categories
-        const newSurveyRef = ref(database, `SecondYear/FourthSemester/BTCOC401:Design & Analysis of Algorithm/${prn}`); // Use PRN as key
+        const newSurveyRef = ref(database, `SecondYear/FourthSemester/BTCOC401:Design & Analysis of Algorithms/${prn}`); // Use PRN as key
         set(newSurveyRef, {
             email,
             fullname,

@@ -7,6 +7,11 @@ import ButtonGroup from './components/buttongroup';
 import AdminLogin from './admin/AdminLogin';
 import AdminYears from './admin/adminyears';
 import SecondYearCharts from './admin/secondyearcharts/secondyearcharts';
+import DLDMChart from './admin/secondyearcharts/fourthsem/digital-logic-design-microprocessors';
+import OperatingSystemsChart from './admin/secondyearcharts/fourthsem/operating-systems';
+import BasichumanrightsChart from './admin/secondyearcharts/fourthsem/basic-human-rights';
+import ProbabilityandStatisticsChart from './admin/secondyearcharts/fourthsem/probability-statistics';
+import DesignandAnalysisofAlgorithimsChart from './admin/secondyearcharts/fourthsem/design-analysis-algorithms';
 import ThirdYearCharts from './admin/thirdyearcharts/thirdyearcharts';
 import TheoryOfComputationChart from './admin/thirdyearcharts/fifthsem/theory-of-computation-chart';
 import NumericalMethodsChart from './admin/thirdyearcharts/fifthsem/numerical-methods-chart';
@@ -54,6 +59,11 @@ function App() {
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/adminyears" element={<AdminYears />} />
             <Route path="/admin/secondyearcharts" element={<SecondYearCharts />} />
+            <Route path="/admin/secondyearcharts/fourthsem/basic-human-rights" element={<BasichumanrightsChart />} />
+            <Route path="/admin/secondyearcharts/fourthsem/digital-logic-design-microprocessors" element={<DLDMChart />} />
+            <Route path="/admin/secondyearcharts/fourthsem/operating-systems" element={<OperatingSystemsChart />} />
+            <Route path="/admin/secondyearcharts/fourthsem/design-analysis-algorithms" element={<DesignandAnalysisofAlgorithimsChart />} />
+           <Route path="/admin/secondyearcharts/fourthsem/probability-statistics" element={<ProbabilityandStatisticsChart />} />
             <Route path="/admin/thirdyearcharts" element={<ThirdYearCharts />} />
             <Route path="/admin/thirdyearcharts/fifthsem/theory-of-computation-chart" element={<TheoryOfComputationChart />} />
             <Route path="/admin/thirdyearcharts/fifthsem/numerical-methods-chart" element={<NumericalMethodsChart />} />

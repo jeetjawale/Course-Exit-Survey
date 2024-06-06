@@ -131,7 +131,7 @@ function EconomicsManagementChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Economics and Management Ratings",
+                            text: "BTHM505(A):Economics and Management Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function EconomicsManagementChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "EconomicsManagementFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTHM505(A):Economics and Management Feedback.xlsx");
     };
 
     const buttonStyle = {

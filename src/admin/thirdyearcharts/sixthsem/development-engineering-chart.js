@@ -131,7 +131,7 @@ function DevelopmentEngineeringChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Development Engineering Ratings",
+                            text: "BTHM605(A):Development Engineering Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function DevelopmentEngineeringChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "DevelopmentEngineeringFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTHM605(A):Development Engineering Feedback.xlsx");
     };
 
     const buttonStyle = {

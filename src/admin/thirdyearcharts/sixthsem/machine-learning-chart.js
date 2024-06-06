@@ -131,7 +131,7 @@ function MachineLearningChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Machine Learning Ratings",
+                            text: "BTCOC603:Machine Learning Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function MachineLearningChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "MachineLearningFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTCOC603:Machine Learning Feedback.xlsx");
     };
 
     const buttonStyle = {

@@ -131,7 +131,7 @@ function InternetOfThingsChart() {
                     plugins: {
                         title: {
                             display: true,
-                            text: "Internet of Things Ratings",
+                            text: "BTCOE604(B):Internet of Things Ratings",
                             font: {
                                 size: 18, // Adjust the font size as needed
                                 weight: "bold"
@@ -157,7 +157,7 @@ function InternetOfThingsChart() {
         const worksheet = XLSX.utils.json_to_sheet(feedbackData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Feedback Data");
-        XLSX.writeFile(workbook, "InternetOfThingsFeedback.xlsx");
+        XLSX.writeFile(workbook, "BTCOE604(B):Internet of Things Feedback.xlsx");
     };
 
     const buttonStyle = {
