@@ -135,7 +135,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion14",
-        "title": "Ability to apply Compiler Design principles and techniques.",
+        "title": "Ability to define, comprehend, and solve a variety of competitive programming challenges found in online code challenge contests.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -143,7 +143,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion15",
-        "title": "Ability to develop the logic and programs for simple to complex Compiler systems\ndesign.",
+        "title": "Ability to apply/implement various elementary data structures in competitive problems.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -151,14 +151,14 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion16",
-        "title": "Ability to understand and corelate the Compiler concepts with the working of\nexisting compiler systems.",
+        "title": "Ability to analyze, distinguish, and implement various string-related operations to solve the program challenge. ",
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
        },
        {
         "type": "rating",
         "name": "coaquestion17",
-        "title": "Ability to implement the concepts related to compiler phases with their different\nalgorithms by using some high level language.",
+        "title": "Ability to design/implement/apply sorting algorithms concepts for solving competitive program challenges.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -166,7 +166,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion18",
-        "title": "Ability to understand and meet requirements of compiler standards and working\nstrategy.",
+        "title": "Ability to recognize, use, implement, and apply algebra and arithmetic concepts in order to solve competitive program challenges.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"

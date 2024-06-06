@@ -135,7 +135,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion14",
-        "title": "Ability to apply Compiler Design principles and techniques.",
+        "title": "Able to explain and measure errors in numerical computation.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -143,7 +143,7 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion15",
-        "title": "Ability to develop the logic and programs for simple to complex Compiler systems\ndesign.",
+        "title": "Able to  compare different numerical method techniques with respect to accuracy and efficiency of solution.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -151,14 +151,14 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion16",
-        "title": "Ability to understand and corelate the Compiler concepts with the working of\nexisting compiler systems.",
+        "title": "Able to solve problems  using interpolation techniques in the field of Applied Mathematics and Engineering which requires computing of numerical results using certain raw data.",
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
        },
        {
         "type": "rating",
         "name": "coaquestion17",
-        "title": "Ability to implement the concepts related to compiler phases with their different\nalgorithms by using some high level language.",
+        "title": "Able to apply different numerical techniques  of Differentiation and Integration  to find solution of a function and the area under the function.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -166,7 +166,15 @@ export const json = {
        {
         "type": "rating",
         "name": "coaquestion18",
-        "title": "Ability to understand and meet requirements of compiler standards and working\nstrategy.",
+        "title": "Able to work numerically on the ordinary differential equations using different methods through the theory of finite differences.",
+        "isRequired": true,
+        "minRateDescription": "Strongly Disagree",
+        "maxRateDescription": "Strongly Agree"
+       },
+       {
+        "type": "rating",
+        "name": "coaquestion19",
+        "title": "Able to formulate problem and can use appropriate  numerical method techniques to solve the problems.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
         "maxRateDescription": "Strongly Agree"
@@ -179,7 +187,7 @@ export const json = {
       "elements": [
        {
         "type": "rating",
-        "name": "idquestion19",
+        "name": "idquestion20",
         "title": "The instructor had mastery over the content.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -187,7 +195,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion20",
+        "name": "idquestion21",
         "title": "All the students were treated impartially.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -195,7 +203,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion21",
+        "name": "idquestion22",
         "title": "The instructor had good communication skills.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -203,7 +211,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion22",
+        "name": "idquestion23",
         "title": "The instructor encouraged the students to raise questions in the classroom.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -211,7 +219,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion23",
+        "name": "idquestion24",
         "title": "Technical doubts were clarified well.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
@@ -219,7 +227,7 @@ export const json = {
        },
        {
         "type": "rating",
-        "name": "idquestion24",
+        "name": "idquestion25",
         "title": "The general attitude of the Instructor was quite supportive.",
         "isRequired": true,
         "minRateDescription": "Strongly Disagree",
