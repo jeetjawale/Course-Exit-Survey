@@ -1,4 +1,4 @@
-// src/App.js
+ // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'firebase/database';
@@ -63,7 +63,7 @@ function App() {
             <Route path="/admin/secondyearcharts/fourthsem/digital-logic-design-microprocessors" element={<DLDMChart />} />
             <Route path="/admin/secondyearcharts/fourthsem/operating-systems" element={<OperatingSystemsChart />} />
             <Route path="/admin/secondyearcharts/fourthsem/design-analysis-algorithms" element={<DesignandAnalysisofAlgorithimsChart />} />
-           <Route path="/admin/secondyearcharts/fourthsem/probability-statistics" element={<ProbabilityandStatisticsChart />} />
+            <Route path="/admin/secondyearcharts/fourthsem/probability-statistics" element={<ProbabilityandStatisticsChart />} />
             <Route path="/admin/thirdyearcharts" element={<ThirdYearCharts />} />
             <Route path="/admin/thirdyearcharts/fifthsem/theory-of-computation-chart" element={<TheoryOfComputationChart />} />
             <Route path="/admin/thirdyearcharts/fifthsem/numerical-methods-chart" element={<NumericalMethodsChart />} />
