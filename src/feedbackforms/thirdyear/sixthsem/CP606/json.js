@@ -26,8 +26,13 @@ export const json = {
         "name": "prn",
         "title": "PRN:",
         "isRequired": true,
-        "inputType": "number"
-       },
+        "validators": [
+          {
+            "type": "regex",
+            "regex": "^\d{2}30331245\d{3}$"
+          }
+        ]
+      },
        {
         "type": "text",
         "name": "course-instructor",
