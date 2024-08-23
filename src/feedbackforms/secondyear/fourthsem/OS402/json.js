@@ -29,7 +29,8 @@ export const json = {
         "validators": [
           {
             "type": "regex",
-            "regex": "^\d{2}30331245\d{3}$"
+            "regex": "^\d{2}30331245\d{3}$",
+            "text": "Please enter a valid PRN."
           }
         ]
       },
