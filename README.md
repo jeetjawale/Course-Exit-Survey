@@ -16,7 +16,7 @@ This project is a web application designed to collect feedback from students upo
 - Authentication: Firebase Authentication
 - Backend: Firebase
 - Database: Firebase Realtime Database
--XLSX Generation: xlsx library
+- XLSX Generation: xlsx library
 
 
 ## Screenshots
